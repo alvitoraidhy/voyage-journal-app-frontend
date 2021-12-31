@@ -155,7 +155,7 @@ export default function Dashboard({ token, setToken }) {
                   {notes.length ? (
                     <div className="row g-3 justify-content-center">
                       {notes.map((note) => (
-                        <div className="col-sm-12 col-md-6" key={note.id}>
+                        <div className="col" key={note.id}>
                           <div className="card">
                             <div className="card-header fw-bold d-flex">
                               <div className="me-auto">
