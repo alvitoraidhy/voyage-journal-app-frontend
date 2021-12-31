@@ -63,7 +63,7 @@ export default function UpdateNote({ token }) {
       .finally(() => {
         setLoadingStatus(false);
       });
-  }, [id, title, body]);
+  }, [id, title, body, token]);
 
   useEffect(() => {
     if (!token) router.push("/");
@@ -103,7 +103,7 @@ export default function UpdateNote({ token }) {
           });
         });
     }
-  }, [token]);
+  }, [id, token]);
 
   return (
     <>

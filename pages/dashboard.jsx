@@ -42,7 +42,7 @@ export default function Dashboard({ token, setToken }) {
         },
         [token]
       );
-  });
+  }, [token]);
 
   const logoutCallback = useCallback(() => {
     setLoadingStatus(true);
@@ -65,7 +65,7 @@ export default function Dashboard({ token, setToken }) {
         [token]
       )
       .finally(() => [setLoadingStatus(false)]);
-  });
+  }, [token]);
 
   useEffect(() => {
     if (!token) router.push("/");
@@ -102,7 +102,7 @@ export default function Dashboard({ token, setToken }) {
 
   useEffect(() => {
     if (token) refreshCallback();
-  }, [token]);
+  }, [token, refreshCallback]);
 
   return (
     <>
@@ -118,7 +118,7 @@ export default function Dashboard({ token, setToken }) {
           <div className="row g-4">
             <div className="col-12 d-flex flex-column align-items-center justify-content-center">
               <h1 className="text-center">
-                {profile ? profile.username : null}'s space
+                {profile ? profile.username : null}&apos;s space
               </h1>
             </div>
             <div className="col-12 d-flex align-items-center justify-content-center">

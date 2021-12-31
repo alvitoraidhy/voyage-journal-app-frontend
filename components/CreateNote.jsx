@@ -54,7 +54,7 @@ export default function CreateNote({ token, refreshCallback }) {
       .finally(() => {
         setLoadingStatus(false);
       });
-  }, [noteTitle, noteBody]);
+  }, [token, noteTitle, noteBody]);
 
   return (
     <>

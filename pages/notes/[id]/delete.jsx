@@ -51,7 +51,7 @@ export default function DeleteNote({ token }) {
       .finally(() => {
         setLoadingStatus(false);
       });
-  }, [id, title]);
+  }, [id, title, token]);
 
   useEffect(() => {
     if (!token) router.push("/");
@@ -90,7 +90,7 @@ export default function DeleteNote({ token }) {
           });
         });
     }
-  }, [token]);
+  }, [id, token]);
 
   return (
     <>
@@ -116,7 +116,7 @@ export default function DeleteNote({ token }) {
                   <p>Are you sure you want to delete this note?</p>
                   <p>
                     <strong>Note title: </strong>
-                    <em>"{title}"</em>
+                    <em>&quot;{title}&quot;</em>
                   </p>
                   <button
                     type="button"
