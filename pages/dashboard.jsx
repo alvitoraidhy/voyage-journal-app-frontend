@@ -7,7 +7,7 @@ import axios from "axios";
 import LoadingOverlay from "../components/LoadingOverlay";
 import CreateNote from "../components/CreateNote";
 
-export default function Home({ token, setToken }) {
+export default function Dashboard({ token, setToken }) {
   const router = useRouter();
 
   const [profile, setProfile] = useState(null);

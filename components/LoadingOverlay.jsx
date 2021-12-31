@@ -1,4 +1,4 @@
-export default ({ isLoading }) => {
+export default function LoadingOverlay({ isLoading }) {
   return isLoading ? (
     <>
       <div className="fixed-top bg-white vh-100 vw-100 d-flex flex-column">
@@ -10,4 +10,4 @@ export default ({ isLoading }) => {
   ) : (
     <></>
   );
-};
+}

@@ -6,7 +6,7 @@ import axios from "axios";
 
 import LoadingOverlay from "../../../components/LoadingOverlay";
 
-export default ({ token }) => {
+export default function DeleteNote({ token }) {
   const router = useRouter();
 
   const { id } = router.query;
@@ -138,4 +138,4 @@ export default ({ token }) => {
       </div>
     </>
   );
-};
+}

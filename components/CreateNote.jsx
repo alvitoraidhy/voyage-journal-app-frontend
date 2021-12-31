@@ -2,7 +2,7 @@ import { useState, useCallback, useRef } from "react";
 import toast from "react-hot-toast";
 import axios from "axios";
 
-export default ({ token, refreshCallback }) => {
+export default function CreateNote({ token, refreshCallback }) {
   const [noteTitle, setNoteTitle] = useState("");
   const [noteBody, setNoteBody] = useState("");
   const [isLoading, setLoadingStatus] = useState(false);
@@ -145,4 +145,4 @@ export default ({ token, refreshCallback }) => {
       </div>
     </>
   );
-};
+}
