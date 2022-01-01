@@ -1,1 +1,2 @@
-web: npm run build && npm start -- -p $PORT
+release: npm run build
+web: npm start -- -p $PORT
